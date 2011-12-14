@@ -33,6 +33,7 @@ public class MediaExampleActivity extends Activity implements OnCompletionListen
     
     @Override
     public void onDestroy(){
+        super.onDestroy();
     	if(mediaCursor!=null){
     		mediaCursor.close();
     	}
@@ -40,6 +41,7 @@ public class MediaExampleActivity extends Activity implements OnCompletionListen
     
    @Override
    public void onPause(){
+       super.onPause();
 	   if(videoView != null)
 		   videoView.pause();
    }
